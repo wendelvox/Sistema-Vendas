@@ -6,7 +6,7 @@ interface LayoutProps {
 
 }
 
-export const Layout =  ({titulo}: LayoutProps)  =>{
+export const Layout =  ({titulo,children}: LayoutProps)  =>{
     return (
         <div className="app">
             <section className="main-content columns is-fullheight">
@@ -20,7 +20,9 @@ export const Layout =  ({titulo}: LayoutProps)  =>{
                                 </p>
                              </div>
                              <div className="card-content">
-                                <div className="content">Contéudo</div>
+                                <div className="content">
+                                    {children}
+                                </div>
                              </div>
                         </div>
                     </div>
